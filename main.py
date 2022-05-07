@@ -2,8 +2,15 @@ import time
 from playsound import playsound
 
 interval = 30
-quantity = 4
+repeat = 0
 
-for x in range(quantity):
-    playsound("beep.mp3")
+playsound("beep.mp3")
+
+for x in range(repeat):
     time.sleep(interval)
+    playsound("beep.mp3")
+
+#Two rapid beeps at the end to let you know the program ended
+playsound("beep.mp3")
+time.sleep(.01)
+playsound("beep.mp3")
